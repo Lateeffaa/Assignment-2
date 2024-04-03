@@ -30,6 +30,7 @@ class Management(Person):
     def displayManagementInfo(self):  # Display data about the management employee
         print("Employee Information:")
         print("Name:", self.get_f_name(), self.get_l_name())
+        print("Age:", self.getAge())
         print("Gender:", self.get_gender())
         print("Phone Number:", self.get_phone_num())
         print("Employee ID:", self.getEmployeeID())
