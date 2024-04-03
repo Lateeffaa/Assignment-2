@@ -27,8 +27,8 @@ class Management(Person):
     def getPosition(self):
         return self.__position
 
-    def displayManagementInfo(self): # Display data about the management employee
-        print("Employee Details:")
+    def displayManagementInfo(self):  # Display data about the management employee
+        print("Employee Information:")
         print("Name:", self.get_f_name(), self.get_l_name())
         print("Gender:", self.get_gender())
         print("Phone Number:", self.get_phone_num())
