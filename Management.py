@@ -1,8 +1,9 @@
+from Person import Person
 class Management(Person):
     """
     Class representing an employee in the management team of the museum inheriting attributes from Person class
+    (This is a child class of the Person class)
     """
-
     def __init__(self, f_name, l_name, gender, phone_num, employee_id, department, position):
         super().__init__(f_name, l_name, gender, phone_num)  # Initializing the parent class with common person attributes
         # Initializing attributes of the management employee
@@ -21,7 +22,7 @@ class Management(Person):
     def getDepartment(self):
         return self.__department
 
-     def setPosition(self, position):
+    def setPosition(self, position):
         self.__position = position
     def getPosition(self):
         return self.__position
