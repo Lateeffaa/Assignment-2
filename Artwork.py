@@ -38,4 +38,8 @@ class Exhibition:
 
     def getTotalArtworks(self):  # Gets and returns the total number of artworks in the exhibition
         return len(self.artworks)
-      
+
+    def displayInfo(self):  # Display data about exhibition and the artworks
+        print(f"Exhibition: {self.name}")
+        for artwork in self.artworks:
+            print(f"Artwork: {self.artworks.index(artwork) + 1}. {artwork._title}, Artist: {artwork.__artist}, Date: {artwork.__creation_date}")
