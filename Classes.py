@@ -207,3 +207,4 @@ class TicketandPricing:
 
     def isFree(self):  # Check if ticket is free
         return self.calculatePrice() == 0.0
+        
