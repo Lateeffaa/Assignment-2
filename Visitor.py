@@ -4,11 +4,11 @@ class Visitor(Person):
     Class representing a visitor inheriting from the Person class
     This class has an aggregation relationship with the Ticket class
     """
-    def __init__(self, f_name, l_name, gender, phone_num, age, nationality, visitorId, email):
+    def __init__(self, f_name, l_name, gender, phone_num, age, nationality, visitorID, email):
         super().__init__(f_name, l_name, gender,phone_num)  # Initializing the parent class with common person attributes
         # Initializing attributes of the visitor
         self.__nationality = nationality
-        self.__visitorId = visitorId
+        self.__visitorID = visitorID
         self.__email = email
         self._tickets = []  # Stores the Ticket objects since there is an aggregation relationship
 
@@ -18,10 +18,10 @@ class Visitor(Person):
     def getNationality(self):
         return self.__nationality
 
-    def setVisitorId(self, visitorId):
-        self.__visitorId = visitorId
-    def getVisitorId(self):
-        return self.__visitorId
+    def setVisitorID(self, visitorID):
+        self.__visitorID = visitorID
+    def getVisitorID(self):
+        return self.__visitorID
 
     def setEmail(self, email):
         self.__email = email
@@ -35,7 +35,7 @@ class Visitor(Person):
         print("Gender:", self.get_gender())
         print("Phone Number:", self.get_phone_num())
         print("Nationality:", self.getNationality())
-        print("Visitor ID:", self.getVisitorId())
+        print("Visitor ID:", self.getVisitorID())
         print("Email:", self.getEmail())
         print()
 
