@@ -1,6 +1,4 @@
 from enum import Enum
-from datetime import datetime
-
 
 class Artwork:
     """
@@ -14,7 +12,12 @@ class Artwork:
         self.__date_of_creation = date_of_creation
         self.__historical_significance = historical_significance
         self.__exhibition_location = exhibition_location
+# Getter methods for private attributes
+    def get_artist(self):
+        return self.__artist
 
+    def get_creation_date(self):
+        return self.__date_of_creation
 
 class Exhibition:
     """
@@ -53,7 +56,7 @@ class Exhibition:
         print(f"Exhibition: {self.name}")
         for artwork in self.artworks:
             print(
-                f"Artwork: {self.artworks.index(artwork) + 1}. {artwork._title}, Artist: {artwork.__artist}, Date: {artwork.__creation_date}")
+                f"Artwork: {self.artworks.index(artwork) + 1}. {artwork._title}, Artist: {artwork.get_artist()}, Date: {artwork.get_creation_date()}")
 
 
 class Person:
@@ -137,7 +140,8 @@ class Visitor(Person):
         self._tickets.append(ticket)
 
     def getTicket(self):  # Returns copy of visitor's list of tickets
-        return self._ticket[:]
+        return self._tickets[:]
+
 
 
 class Management(Person):
